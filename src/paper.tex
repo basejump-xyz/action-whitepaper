@@ -1,0 +1,126 @@
+\documentclass[letterpaper,twocolumn]{article}
+ 
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e} % Allows \RaggedRight for better control
+\usepackage[margin=0.75in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{xurl}  % Enhanced URL breaking
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{needspace}
+
+% Configure URL breaking
+\def\UrlBreaks{\do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]%
+  \do\)\do\,\do\?\do\'\do+\do\=\do\#\do\-}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage[skip=3pt]{caption}
+\usepackage{listings}
+\usepackage[style=iso]{datetime2}
+\usepackage{tabularx}
+
+\captionsetup{font=small}  % Options: scriptsize, footnotesize, small
+
+% Configure listings package 
+\lstset{
+  basicstyle=\ttfamily\small,
+  frame=single,
+  breaklines=true, 
+  showstringspaces=false,
+  columns=flexible
+}
+
+% Section title formatting
+\titleformat{\section}{\normalfont\Large\bfseries\raggedright}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries\raggedright}{\thesubsection}{1em}{}
+
+% Page setup
+\setlength{\columnsep}{0.25in}
+\raggedbottom
+
+% Enhanced widow and orphan prevention
+\widowpenalty=15000        % Increased from 10000
+\clubpenalty=15000         % Increased from 10000
+\displaywidowpenalty=15000 % For math displays
+\brokenpenalty=15000       % Discourages hyphenation across pages
+\predisplaypenalty=10000   % Discourages breaks before displays
+\postdisplaypenalty=10000  % Discourages breaks after displays
+
+% Prevent single words on lines
+\tolerance=1000
+\emergencystretch=3em
+\hbadness=10000
+\vbadness=10000
+\sloppy                    % Allows more stretch
+\finalhyphendemerits=5000  % Discourages hyphenation in last line
+\doublehyphendemerits=5000 % Discourages consecutive hyphens
+\adjdemerits=5000          % Discourages breaks after short lines
+\looseness=1              % Slightly looser spacing to prevent orphans
+
+\hyphenpenalty=1000      % Increase penalty for normal hyphenation (higher discourages)
+
+
+% Title and author information
+\title{The Action Substrate:\\A Framework for Self-Sovereign Games and Communities}
+
+\author{
+Brent Fitzgerald \\
+Matt Mason \\
+Lex Johnson \\
+Bryan Longhurst \\
+Iaroslav Makarchuk \\
+Oleksii Hodovanets \\
+Oleksandr Vorobiov
+ \\[1ex]
+\texttt{team@basejump.xyz}
+}
+
+\date{DRAFT v\input{version} - \DTMtoday}
+
+% Configure list items to use RaggedRight
+\newcommand{\configureRaggedItems}{%
+  \let\olditem\item
+  \renewcommand{\item}{\olditem\RaggedRight}%
+}
+
+\newcommand{\restoreItems}{%
+  \let\item\olditem
+}
+
+\begin{document}
+
+
+\maketitle
+\configureRaggedItems
+
+% Include sections
+\input{sections/00-abstract}
+\input{sections/01-background}
+\input{sections/02-system_overview}
+\input{sections/03-hyperobjects}
+\input{sections/04-action_token}
+\input{sections/05-governance}
+\input{sections/06-market_strategy}
+\input{sections/07-broadside_basejump}
+\input{sections/08-action_figure_nodes}
+\input{sections/09-real_world_action}
+\input{sections/10-vision_summary}
+\input{sections/11-regulatory_compliance_statement}
+\break
+\input{sections/12-risk_factors}
+\break
+\input{sections/13-progressive_decentralization}
+\break
+\input{sections/14-treasury_mechanism}
+
+\clearpage
+\restoreItems
+\raggedright
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+\end{document}

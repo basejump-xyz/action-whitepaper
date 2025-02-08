@@ -1,0 +1,26 @@
+\section{Governance Framework}
+
+A number of aspects of the Action substrate may be governed by token holders. In order to prioritize active individual community contributors over institutions, the governance protocol may employ mechanisms such as quadratic voting and sybil-resistant engagement metrics. 
+
+As the network matures, the founding team's control over key decisions diminishes. The team aims for on-chain voting to exclusively govern treasury disbursements by Q1 2027.
+
+\subsection{Voting Mechanisms}
+
+The governance system employs multiple mechanisms to ensure fair and effective decision-making:
+
+\vspace{1em}
+
+\noindent\textbf{Quadratic Voting:} Following successful implementations like Gitcoin \cite{Gitcoin2023}, this mechanism balances influence by reducing outsized impact of large holders\footnote{Quadratic voting makes the cost of votes increase quadratically with the number of votes cast. For example, casting 1 vote costs 1 token, but casting 2 votes costs 4 tokens, 3 votes costs 9 tokens, etc. This ensures that a single large holder cannot dominate governance decisions, as the cost of additional votes becomes prohibitively expensive.}.
+
+\vspace{1em}
+
+\noindent\textbf{Engagement-Based Weighting:} Voting power is influenced by active participation in the ecosystem\footnote{The engagement-based weighting system uses on-chain metrics to measure meaningful participation, such as length of token staking, frequency of hyperobject creation/trading, and node operation uptime. This creates a meritocratic system where voting power is earned through sustained contribution to the ecosystem rather than just token holdings.}. Examples include:
+\begin{itemize}
+\item Stake tokens over time
+\item Run an AO or Action node
+\item Create or trade Hyperobjects
+\end{itemize}
+
+The community may further evaluate and migrate to other decisioning systems over time, allowing the protocol to evolve and adopt best practices in future.
+
+The treasury also will utilize built-in constraints and guardrails to ensure allocations for environmental initiatives and ecosystem sustainability (Real World Action).

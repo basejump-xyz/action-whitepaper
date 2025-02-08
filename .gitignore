@@ -22,8 +22,6 @@
 *.synctex.gz
 *.run.xml
 
-# PDF files
-*.pdf
 
 # Backup files
 *~
@@ -36,3 +34,13 @@
 .idea/
 *.swp
 *.swo
+
+.DS_Store
+
+.notes
+.local
+
+# Ignore the auto-generated files
+src/paper.pdf 
+src/paper.synctex(busy)
+build
