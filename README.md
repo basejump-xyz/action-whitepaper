@@ -2,6 +2,8 @@
 
 This repository contains the LaTeX source code for the [Basejump](https://basejump.xyz/) Action whitepaper. The paper outlines the technical architecture, tokenomics, governance model, and vision for the [Basejump](https://basejump.xyz/) ecosystem.
 
+Latest version: [view](/action-whitepaper.pdf) | [download](/action-whitepaper.pdf?raw=true)
+
 <img src="src/images/image1.png" alt="Action" width="300"/>
 
 ## Prerequisites
@@ -18,7 +20,7 @@ Before building the whitepaper, ensure you have the following installed:
      ```bash
      brew install just
      ```
-   - Other installation methods available at [just.systems/](https://just.systems/)
+   - Other installation methods available at [just.systems/](https://just.systems)
 
 ## Building the Whitepaper
 
